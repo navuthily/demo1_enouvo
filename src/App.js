@@ -109,9 +109,9 @@ console.log(list)
      <tr >
        <td>{item.name}</td>
        <td>{item.age}</td>
-       <td><button onClick={(e)=>this.onDelete(item)} >Delete</button></td>
+       <td><button onClick={() => {if(window.confirm('Delete the item?')){this.onDelete(item)};}} >Delete</button></td>
      </tr>
-      )
+      )//onClick={(e)=>this.onDelete(item)} 
     })
     :<p>nothing here</p>
   }
